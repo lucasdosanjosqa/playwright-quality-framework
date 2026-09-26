@@ -58,6 +58,8 @@ utils/        Reusable test utilities
 
 Empty architectural boundaries are tracked intentionally, but contain no speculative implementations. New abstractions should be added only after a concrete test use case demonstrates the need.
 
+End-to-end tests import `test` and `expect` from `fixtures/test.ts`. This exposes the validated `environmentConfig` fixture while preserving all native Playwright fixtures. See [Custom Playwright Fixtures](docs/fixtures.md) for its scope and usage boundaries.
+
 ## Environment configuration
 
 Supported environments are `local`, `development`, and `staging`. Select one with `TEST_ENV`:
