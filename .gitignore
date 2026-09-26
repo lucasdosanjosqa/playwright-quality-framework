@@ -41,6 +41,14 @@ build/Release
 node_modules/
 jspm_packages/
 
+# Playwright artifacts
+playwright-report/
+test-results/
+blob-report/
+
+# Playwright browser binaries installed in the project
+.playwright/
+
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
