@@ -11,6 +11,7 @@ The first milestone needs an executable Playwright and TypeScript foundation wit
 - Empty boundaries are tracked without sample implementations. Page objects, clients, and shared fixtures will be introduced only when duplication or a concrete scenario justifies them.
 - Runtime configuration is resolved and validated independently from Playwright configuration. Safe local defaults are versioned, while development and staging endpoints must be supplied explicitly.
 - Local configuration is loaded from an ignored `.env` file. Existing process variables take precedence, allowing a future CI provider to inject configuration and secrets without CI-specific application code.
+- End-to-end tests use one framework-owned Playwright extension point. The immutable environment configuration is a worker-scoped value fixture; fixtures for authentication, pages, and API clients remain deferred until they have concrete lifecycle requirements.
 - The foundation smoke test renders in-memory HTML, keeping setup validation independent of networks and external applications.
 - Chromium is the only initial browser project to keep the foundation small. Cross-browser coverage should be added when application scenarios and support requirements are defined.
 
